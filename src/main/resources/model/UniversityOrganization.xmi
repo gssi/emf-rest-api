@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UniversityOrganization:UniversityOrganizationModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:UniversityOrganization="http://it.gssi/university_organization/v1"
+    xsi:schemaLocation="http://it.gssi/university_organization/v1 UniversityOrganization.ecore">
+  <departments
+      name="Physics"/>
+  <departments
+      name="Computer Science">
+    <researchGroups
+        name="MDE"
+        openPosition="//@facultyMembers.0/@positions.1 //@facultyMembers.0/@positions.0"/>
+  </departments>
+  <facultyMembers
+      firstName="Fra"
+      lastName="Basciani"
+      email="fra@ba"
+      department="//@departments.1"
+      researchGroup="//@departments.1/@researchGroups.0">
+    <positions
+        projectTitle="Thale Space Seminar"
+        researchGroup="//@departments.1/@researchGroups.0">
+      <guest
+          firstName="Adiel"
+          lastName="Tsfasfasf"
+          email="sadas@dasd"
+          affiliation="UNIVAQ"
+          inDate="05/05/2023"
+          outDate="05/05/2023">
+        <activity
+            xsi:type="UniversityOrganization:Seminar"
+            eventDate="06/05/2023"
+            topic="On shuttle space mission"/>
+        <remuneration
+            travelRefund="600 euros"
+            perDiems="2000 euros"
+            hotelPrepaid="true"
+            notes="A lot of money needed"
+            remunerationTotal="10000000 euros"/>
+      </guest>
+    </positions>
+    <positions
+        projectTitle="AnotherOne"
+        researchGroup="//@departments.1/@researchGroups.0"/>
+  </facultyMembers>
+</UniversityOrganization:UniversityOrganizationModel>
