@@ -4,6 +4,8 @@ package UniversityOrganization;
 
 import org.eclipse.emf.common.util.EList;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Department</b></em>'.
@@ -31,6 +33,7 @@ public interface Department extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
+	@JsonIgnore
 	EList<ResearchGroup> getResearchGroups();
 
 } // Department

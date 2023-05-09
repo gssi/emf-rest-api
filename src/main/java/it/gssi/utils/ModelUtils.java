@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -19,6 +20,8 @@ import UniversityOrganization.UniversityOrganizationPackage;
 public class ModelUtils {
 	
 	private String modelPath = "classpath:model/UniversityOrganization.xmi";
+//	@Value("${emf.model.path}") 
+//	private String modelPath;
 	
 	@Autowired
 	ResourceLoader resourceLoader = new DefaultResourceLoader();
