@@ -431,6 +431,15 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAcademicPeople_ShortBio() {
+		return (EAttribute)academicPeopleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getActivity() {
 		return activityEClass;
 	}
@@ -478,6 +487,42 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 */
 	public EAttribute getSeminar_Topic() {
 		return (EAttribute)seminarEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSeminar_Venue() {
+		return (EAttribute)seminarEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSeminar_Agenda() {
+		return (EAttribute)seminarEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSeminar_RemoteLink() {
+		return (EAttribute)seminarEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSeminar_Abstract() {
+		return (EAttribute)seminarEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -639,6 +684,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__LAST_NAME);
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__EMAIL);
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__GRADE);
+		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__SHORT_BIO);
 
 		activityEClass = createEClass(ACTIVITY);
 		createEAttribute(activityEClass, ACTIVITY__EVENT_DATE);
@@ -648,6 +694,10 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 
 		seminarEClass = createEClass(SEMINAR);
 		createEAttribute(seminarEClass, SEMINAR__TOPIC);
+		createEAttribute(seminarEClass, SEMINAR__VENUE);
+		createEAttribute(seminarEClass, SEMINAR__AGENDA);
+		createEAttribute(seminarEClass, SEMINAR__REMOTE_LINK);
+		createEAttribute(seminarEClass, SEMINAR__ABSTRACT);
 
 		researchCollaborationEClass = createEClass(RESEARCH_COLLABORATION);
 		createEAttribute(researchCollaborationEClass, RESEARCH_COLLABORATION__NOTE);
@@ -736,6 +786,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEAttribute(getAcademicPeople_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAcademicPeople_Email(), ecorePackage.getEString(), "email", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAcademicPeople_Grade(), this.getAcademicGrade(), "grade", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAcademicPeople_ShortBio(), ecorePackage.getEString(), "shortBio", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityEClass, Activity.class, "Activity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActivity_EventDate(), ecorePackage.getEString(), "eventDate", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -745,6 +796,10 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 
 		initEClass(seminarEClass, Seminar.class, "Seminar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSeminar_Topic(), ecorePackage.getEString(), "topic", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeminar_Venue(), ecorePackage.getEString(), "venue", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeminar_Agenda(), ecorePackage.getEString(), "agenda", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeminar_RemoteLink(), ecorePackage.getEString(), "remoteLink", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeminar_Abstract(), ecorePackage.getEString(), "abstract", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(researchCollaborationEClass, ResearchCollaboration.class, "ResearchCollaboration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResearchCollaboration_Note(), ecorePackage.getEString(), "note", null, 0, 1, ResearchCollaboration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -288,13 +288,22 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int ACADEMIC_PEOPLE__GRADE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Short Bio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACADEMIC_PEOPLE__SHORT_BIO = 4;
+
+	/**
 	 * The number of structural features of the '<em>Academic People</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACADEMIC_PEOPLE_FEATURE_COUNT = 4;
+	int ACADEMIC_PEOPLE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Academic People</em>' class.
@@ -350,6 +359,15 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @ordered
 	 */
 	int FACULTY_MEMBER__GRADE = ACADEMIC_PEOPLE__GRADE;
+
+	/**
+	 * The feature id for the '<em><b>Short Bio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACULTY_MEMBER__SHORT_BIO = ACADEMIC_PEOPLE__SHORT_BIO;
 
 	/**
 	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
@@ -496,6 +514,15 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @ordered
 	 */
 	int GUEST__GRADE = ACADEMIC_PEOPLE__GRADE;
+
+	/**
+	 * The feature id for the '<em><b>Short Bio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST__SHORT_BIO = ACADEMIC_PEOPLE__SHORT_BIO;
 
 	/**
 	 * The feature id for the '<em><b>Activity</b></em>' containment reference list.
@@ -672,13 +699,49 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int SEMINAR__TOPIC = ACTIVITY_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Venue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMINAR__VENUE = ACTIVITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Agenda</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMINAR__AGENDA = ACTIVITY_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Remote Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMINAR__REMOTE_LINK = ACTIVITY_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMINAR__ABSTRACT = ACTIVITY_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Seminar</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMINAR_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 1;
+	int SEMINAR_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Seminar</em>' class.
@@ -1099,6 +1162,17 @@ public interface UniversityOrganizationPackage extends EPackage {
 	EAttribute getAcademicPeople_Grade();
 
 	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.AcademicPeople#getShortBio <em>Short Bio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Short Bio</em>'.
+	 * @see UniversityOrganization.AcademicPeople#getShortBio()
+	 * @see #getAcademicPeople()
+	 * @generated
+	 */
+	EAttribute getAcademicPeople_ShortBio();
+
+	/**
 	 * Returns the meta object for class '{@link UniversityOrganization.Activity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1160,6 +1234,50 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSeminar_Topic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getVenue <em>Venue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Venue</em>'.
+	 * @see UniversityOrganization.Seminar#getVenue()
+	 * @see #getSeminar()
+	 * @generated
+	 */
+	EAttribute getSeminar_Venue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Agenda</em>'.
+	 * @see UniversityOrganization.Seminar#getAgenda()
+	 * @see #getSeminar()
+	 * @generated
+	 */
+	EAttribute getSeminar_Agenda();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getRemoteLink <em>Remote Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Remote Link</em>'.
+	 * @see UniversityOrganization.Seminar#getRemoteLink()
+	 * @see #getSeminar()
+	 * @generated
+	 */
+	EAttribute getSeminar_RemoteLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getAbstract <em>Abstract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Abstract</em>'.
+	 * @see UniversityOrganization.Seminar#getAbstract()
+	 * @see #getSeminar()
+	 * @generated
+	 */
+	EAttribute getSeminar_Abstract();
 
 	/**
 	 * Returns the meta object for class '{@link UniversityOrganization.ResearchCollaboration <em>Research Collaboration</em>}'.
@@ -1524,6 +1642,14 @@ public interface UniversityOrganizationPackage extends EPackage {
 		EAttribute ACADEMIC_PEOPLE__GRADE = eINSTANCE.getAcademicPeople_Grade();
 
 		/**
+		 * The meta object literal for the '<em><b>Short Bio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACADEMIC_PEOPLE__SHORT_BIO = eINSTANCE.getAcademicPeople_ShortBio();
+
+		/**
 		 * The meta object literal for the '{@link UniversityOrganization.impl.ActivityImpl <em>Activity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1576,6 +1702,38 @@ public interface UniversityOrganizationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SEMINAR__TOPIC = eINSTANCE.getSeminar_Topic();
+
+		/**
+		 * The meta object literal for the '<em><b>Venue</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMINAR__VENUE = eINSTANCE.getSeminar_Venue();
+
+		/**
+		 * The meta object literal for the '<em><b>Agenda</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMINAR__AGENDA = eINSTANCE.getSeminar_Agenda();
+
+		/**
+		 * The meta object literal for the '<em><b>Remote Link</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMINAR__REMOTE_LINK = eINSTANCE.getSeminar_RemoteLink();
+
+		/**
+		 * The meta object literal for the '<em><b>Abstract</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMINAR__ABSTRACT = eINSTANCE.getSeminar_Abstract();
 
 		/**
 		 * The meta object literal for the '{@link UniversityOrganization.impl.ResearchCollaborationImpl <em>Research Collaboration</em>}' class.

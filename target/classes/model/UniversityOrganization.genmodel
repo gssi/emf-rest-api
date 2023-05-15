@@ -43,6 +43,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//AcademicPeople/lastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//AcademicPeople/email"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//AcademicPeople/grade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//AcademicPeople/shortBio"/>
     </genClasses>
     <genClasses image="false" ecoreClass="UniversityOrganization.ecore#//Activity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Activity/eventDate"/>
@@ -52,6 +53,10 @@
     </genClasses>
     <genClasses ecoreClass="UniversityOrganization.ecore#//Seminar">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Seminar/topic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Seminar/venue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Seminar/agenda"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Seminar/remoteLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//Seminar/abstract"/>
     </genClasses>
     <genClasses ecoreClass="UniversityOrganization.ecore#//ResearchCollaboration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UniversityOrganization.ecore#//ResearchCollaboration/note"/>

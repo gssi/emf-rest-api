@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UniversityOrganization.AcademicPeople#getLastName <em>Last Name</em>}</li>
  *   <li>{@link UniversityOrganization.AcademicPeople#getEmail <em>Email</em>}</li>
  *   <li>{@link UniversityOrganization.AcademicPeople#getGrade <em>Grade</em>}</li>
+ *   <li>{@link UniversityOrganization.AcademicPeople#getShortBio <em>Short Bio</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getAcademicPeople()
@@ -114,5 +115,27 @@ public interface AcademicPeople extends EObject {
 	 * @generated
 	 */
 	void setGrade(AcademicGrade value);
+
+	/**
+	 * Returns the value of the '<em><b>Short Bio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Short Bio</em>' attribute.
+	 * @see #setShortBio(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getAcademicPeople_ShortBio()
+	 * @model
+	 * @generated
+	 */
+	String getShortBio();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.AcademicPeople#getShortBio <em>Short Bio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Short Bio</em>' attribute.
+	 * @see #getShortBio()
+	 * @generated
+	 */
+	void setShortBio(String value);
 
 } // AcademicPeople

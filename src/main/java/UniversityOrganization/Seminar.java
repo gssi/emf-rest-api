@@ -13,6 +13,10 @@ package UniversityOrganization;
  * </p>
  * <ul>
  *   <li>{@link UniversityOrganization.Seminar#getTopic <em>Topic</em>}</li>
+ *   <li>{@link UniversityOrganization.Seminar#getVenue <em>Venue</em>}</li>
+ *   <li>{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}</li>
+ *   <li>{@link UniversityOrganization.Seminar#getRemoteLink <em>Remote Link</em>}</li>
+ *   <li>{@link UniversityOrganization.Seminar#getAbstract <em>Abstract</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar()
@@ -41,5 +45,93 @@ public interface Seminar extends Activity {
 	 * @generated
 	 */
 	void setTopic(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Venue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Venue</em>' attribute.
+	 * @see #setVenue(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_Venue()
+	 * @model
+	 * @generated
+	 */
+	String getVenue();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Seminar#getVenue <em>Venue</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Venue</em>' attribute.
+	 * @see #getVenue()
+	 * @generated
+	 */
+	void setVenue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Agenda</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Agenda</em>' attribute.
+	 * @see #setAgenda(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_Agenda()
+	 * @model
+	 * @generated
+	 */
+	String getAgenda();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Agenda</em>' attribute.
+	 * @see #getAgenda()
+	 * @generated
+	 */
+	void setAgenda(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Remote Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Remote Link</em>' attribute.
+	 * @see #setRemoteLink(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_RemoteLink()
+	 * @model
+	 * @generated
+	 */
+	String getRemoteLink();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Seminar#getRemoteLink <em>Remote Link</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Remote Link</em>' attribute.
+	 * @see #getRemoteLink()
+	 * @generated
+	 */
+	void setRemoteLink(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Abstract</em>' attribute.
+	 * @see #setAbstract(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_Abstract()
+	 * @model
+	 * @generated
+	 */
+	String getAbstract();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Seminar#getAbstract <em>Abstract</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Abstract</em>' attribute.
+	 * @see #getAbstract()
+	 * @generated
+	 */
+	void setAbstract(String value);
 
 } // Seminar

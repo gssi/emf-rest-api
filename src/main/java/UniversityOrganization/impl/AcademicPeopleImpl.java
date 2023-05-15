@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getLastName <em>Last Name</em>}</li>
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getGrade <em>Grade</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getShortBio <em>Short Bio</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +110,26 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected AcademicGrade grade = GRADE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getShortBio() <em>Short Bio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShortBio()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SHORT_BIO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getShortBio() <em>Short Bio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getShortBio()
+	 * @generated
+	 * @ordered
+	 */
+	protected String shortBio = SHORT_BIO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,6 +239,27 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getShortBio() {
+		return shortBio;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setShortBio(String newShortBio) {
+		String oldShortBio = shortBio;
+		shortBio = newShortBio;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO, oldShortBio, shortBio));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -229,6 +271,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return getEmail();
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__GRADE:
 				return getGrade();
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
+				return getShortBio();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,6 +296,9 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return;
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__GRADE:
 				setGrade((AcademicGrade)newValue);
+				return;
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
+				setShortBio((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -277,6 +324,9 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__GRADE:
 				setGrade(GRADE_EDEFAULT);
 				return;
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
+				setShortBio(SHORT_BIO_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,6 +347,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__GRADE:
 				return grade != GRADE_EDEFAULT;
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
+				return SHORT_BIO_EDEFAULT == null ? shortBio != null : !SHORT_BIO_EDEFAULT.equals(shortBio);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,6 +371,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 		result.append(email);
 		result.append(", grade: ");
 		result.append(grade);
+		result.append(", shortBio: ");
+		result.append(shortBio);
 		result.append(')');
 		return result.toString();
 	}
