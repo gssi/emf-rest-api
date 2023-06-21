@@ -40,7 +40,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TRAVEL_REFUND_EDEFAULT = null;
+	protected static final int TRAVEL_REFUND_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getTravelRefund() <em>Travel Refund</em>}' attribute.
@@ -50,7 +50,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected String travelRefund = TRAVEL_REFUND_EDEFAULT;
+	protected int travelRefund = TRAVEL_REFUND_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPerDiems() <em>Per Diems</em>}' attribute.
@@ -60,7 +60,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PER_DIEMS_EDEFAULT = null;
+	protected static final int PER_DIEMS_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getPerDiems() <em>Per Diems</em>}' attribute.
@@ -70,7 +70,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected String perDiems = PER_DIEMS_EDEFAULT;
+	protected int perDiems = PER_DIEMS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isHotelPrepaid() <em>Hotel Prepaid</em>}' attribute.
@@ -120,7 +120,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REMUNERATION_TOTAL_EDEFAULT = null;
+	protected static final int REMUNERATION_TOTAL_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getRemunerationTotal() <em>Remuneration Total</em>}' attribute.
@@ -130,7 +130,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @generated
 	 * @ordered
 	 */
-	protected String remunerationTotal = REMUNERATION_TOTAL_EDEFAULT;
+	protected int remunerationTotal = REMUNERATION_TOTAL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -176,7 +176,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTravelRefund() {
+	public int getTravelRefund() {
 		return travelRefund;
 	}
 
@@ -185,8 +185,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTravelRefund(String newTravelRefund) {
-		String oldTravelRefund = travelRefund;
+	public void setTravelRefund(int newTravelRefund) {
+		int oldTravelRefund = travelRefund;
 		travelRefund = newTravelRefund;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.REMUNERATION__TRAVEL_REFUND, oldTravelRefund, travelRefund));
@@ -197,7 +197,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPerDiems() {
+	public int getPerDiems() {
 		return perDiems;
 	}
 
@@ -206,8 +206,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPerDiems(String newPerDiems) {
-		String oldPerDiems = perDiems;
+	public void setPerDiems(int newPerDiems) {
+		int oldPerDiems = perDiems;
 		perDiems = newPerDiems;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.REMUNERATION__PER_DIEMS, oldPerDiems, perDiems));
@@ -260,7 +260,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRemunerationTotal() {
+	public int getRemunerationTotal() {
 		return remunerationTotal;
 	}
 
@@ -269,8 +269,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRemunerationTotal(String newRemunerationTotal) {
-		String oldRemunerationTotal = remunerationTotal;
+	public void setRemunerationTotal(int newRemunerationTotal) {
+		int oldRemunerationTotal = remunerationTotal;
 		remunerationTotal = newRemunerationTotal;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL, oldRemunerationTotal, remunerationTotal));
@@ -330,10 +330,10 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UniversityOrganizationPackage.REMUNERATION__TRAVEL_REFUND:
-				setTravelRefund((String)newValue);
+				setTravelRefund((Integer)newValue);
 				return;
 			case UniversityOrganizationPackage.REMUNERATION__PER_DIEMS:
-				setPerDiems((String)newValue);
+				setPerDiems((Integer)newValue);
 				return;
 			case UniversityOrganizationPackage.REMUNERATION__HOTEL_PREPAID:
 				setHotelPrepaid((Boolean)newValue);
@@ -342,7 +342,7 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 				setNotes((String)newValue);
 				return;
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
-				setRemunerationTotal((String)newValue);
+				setRemunerationTotal((Integer)newValue);
 				return;
 			case UniversityOrganizationPackage.REMUNERATION__STATUS:
 				setStatus((PaymentStatus)newValue);
@@ -390,15 +390,15 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case UniversityOrganizationPackage.REMUNERATION__TRAVEL_REFUND:
-				return TRAVEL_REFUND_EDEFAULT == null ? travelRefund != null : !TRAVEL_REFUND_EDEFAULT.equals(travelRefund);
+				return travelRefund != TRAVEL_REFUND_EDEFAULT;
 			case UniversityOrganizationPackage.REMUNERATION__PER_DIEMS:
-				return PER_DIEMS_EDEFAULT == null ? perDiems != null : !PER_DIEMS_EDEFAULT.equals(perDiems);
+				return perDiems != PER_DIEMS_EDEFAULT;
 			case UniversityOrganizationPackage.REMUNERATION__HOTEL_PREPAID:
 				return hotelPrepaid != HOTEL_PREPAID_EDEFAULT;
 			case UniversityOrganizationPackage.REMUNERATION__NOTES:
 				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
-				return REMUNERATION_TOTAL_EDEFAULT == null ? remunerationTotal != null : !REMUNERATION_TOTAL_EDEFAULT.equals(remunerationTotal);
+				return remunerationTotal != REMUNERATION_TOTAL_EDEFAULT;
 			case UniversityOrganizationPackage.REMUNERATION__STATUS:
 				return status != STATUS_EDEFAULT;
 		}

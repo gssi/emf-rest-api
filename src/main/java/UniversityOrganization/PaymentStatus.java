@@ -39,6 +39,14 @@ public enum PaymentStatus implements Enumerator {
 	IN_PROGRESS(1, "InProgress", "InProgress"),
 
 	/**
+	 * The '<em><b>Ready To Be Sent</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #READY_TO_BE_SENT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	READY_TO_BE_SENT(2, "ReadyToBeSent", "ReadyToBeSent"), /**
 	 * The '<em><b>Done</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +54,7 @@ public enum PaymentStatus implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DONE(2, "Done", "Done");
+	DONE(3, "Done", "Done");
 
 	/**
 	 * The '<em><b>Todo</b></em>' literal value.
@@ -71,6 +79,17 @@ public enum PaymentStatus implements Enumerator {
 	public static final int IN_PROGRESS_VALUE = 1;
 
 	/**
+	 * The '<em><b>Ready To Be Sent</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #READY_TO_BE_SENT
+	 * @model name="ReadyToBeSent"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int READY_TO_BE_SENT_VALUE = 2;
+
+	/**
 	 * The '<em><b>Done</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,7 +98,7 @@ public enum PaymentStatus implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DONE_VALUE = 2;
+	public static final int DONE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Payment Status</b></em>' enumerators.
@@ -91,6 +110,7 @@ public enum PaymentStatus implements Enumerator {
 		new PaymentStatus[] {
 			TODO,
 			IN_PROGRESS,
+			READY_TO_BE_SENT,
 			DONE,
 		};
 
@@ -150,6 +170,7 @@ public enum PaymentStatus implements Enumerator {
 		switch (value) {
 			case TODO_VALUE: return TODO;
 			case IN_PROGRESS_VALUE: return IN_PROGRESS;
+			case READY_TO_BE_SENT_VALUE: return READY_TO_BE_SENT;
 			case DONE_VALUE: return DONE;
 		}
 		return null;

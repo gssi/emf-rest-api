@@ -14,6 +14,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="UniversityOrganization.ecore#//PaymentStatus">
       <genEnumLiterals ecoreEnumLiteral="UniversityOrganization.ecore#//PaymentStatus/Todo"/>
       <genEnumLiterals ecoreEnumLiteral="UniversityOrganization.ecore#//PaymentStatus/InProgress"/>
+      <genEnumLiterals ecoreEnumLiteral="UniversityOrganization.ecore#//PaymentStatus/ReadyToBeSent"/>
       <genEnumLiterals ecoreEnumLiteral="UniversityOrganization.ecore#//PaymentStatus/Done"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="UniversityOrganization.ecore#//TitlePrefix">

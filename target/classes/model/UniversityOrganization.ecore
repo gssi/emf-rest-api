@@ -75,11 +75,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Remuneration">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="travelRefund" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="perDiems" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="travelRefund" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="perDiems" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hotelPrepaid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="notes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remunerationTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remunerationTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//PaymentStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AcademicGrade">
@@ -90,7 +90,8 @@
   <eClassifiers xsi:type="ecore:EEnum" name="PaymentStatus">
     <eLiterals name="Todo"/>
     <eLiterals name="InProgress" value="1"/>
-    <eLiterals name="Done" value="2"/>
+    <eLiterals name="ReadyToBeSent" value="2"/>
+    <eLiterals name="Done" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TitlePrefix">
     <eLiterals name="Prof"/>

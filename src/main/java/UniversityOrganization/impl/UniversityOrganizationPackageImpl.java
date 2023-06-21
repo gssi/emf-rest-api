@@ -898,11 +898,11 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(remunerationEClass, Remuneration.class, "Remuneration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRemuneration_TravelRefund(), ecorePackage.getEString(), "travelRefund", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRemuneration_PerDiems(), ecorePackage.getEString(), "perDiems", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRemuneration_TravelRefund(), ecorePackage.getEInt(), "travelRefund", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRemuneration_PerDiems(), ecorePackage.getEInt(), "perDiems", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRemuneration_HotelPrepaid(), ecorePackage.getEBoolean(), "hotelPrepaid", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRemuneration_Notes(), ecorePackage.getEString(), "notes", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRemuneration_RemunerationTotal(), ecorePackage.getEString(), "remunerationTotal", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRemuneration_RemunerationTotal(), ecorePackage.getEInt(), "remunerationTotal", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRemuneration_Status(), this.getPaymentStatus(), "status", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
@@ -914,6 +914,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEEnum(paymentStatusEEnum, PaymentStatus.class, "PaymentStatus");
 		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.TODO);
 		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.IN_PROGRESS);
+		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.READY_TO_BE_SENT);
 		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.DONE);
 
 		initEEnum(titlePrefixEEnum, TitlePrefix.class, "TitlePrefix");

@@ -43,11 +43,11 @@
             remoteLink="https://meet.google.com/bmd-wesv-ues"
             abstract="Over the last years, several model repositories have been proposed&#xA;in response to the need of the MDE community for advanced systems supporting&#xA;the reuse of modeling artifacts. Modelers can interact with MDE repositories with&#xA;different intents ranging from merely repository browsing, to searching specific&#xA;artifacts satisfying precise requirements. The organization and browsing facilities&#xA;provided by current repositories is limited since they do not produce structured&#xA;overviews of the contained artifacts, and the categorization mechanisms (if any)&#xA;are based on manual activities. When dealing with large numbers of modeling&#xA;artifacts, such limitations increase the effort for managing and reusing artifacts&#xA;stored in model repositories. By focusing on metamodel repositories, in this paper we propose the application of clustering techniques to automatically organize&#xA;stored metamodels and to provide users with overviews of the application domains covered by the available metamodels. The approach has been implemented&#xA;in the MDEForge repository"/>
         <remuneration
-            travelRefund="€300,00"
-            perDiems="€60,00"
+            travelRefund="300"
+            perDiems="60"
             hotelPrepaid="true"
-            notes="Part"
-            remunerationTotal="€300,00"/>
+            notes="€300,00"
+            remunerationTotal="300"/>
       </guest>
     </positions>
   </facultyMembers>

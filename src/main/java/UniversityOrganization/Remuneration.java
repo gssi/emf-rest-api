@@ -31,12 +31,12 @@ public interface Remuneration extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Travel Refund</em>' attribute.
-	 * @see #setTravelRefund(String)
+	 * @see #setTravelRefund(int)
 	 * @see UniversityOrganization.UniversityOrganizationPackage#getRemuneration_TravelRefund()
 	 * @model
 	 * @generated
 	 */
-	String getTravelRefund();
+	int getTravelRefund();
 
 	/**
 	 * Sets the value of the '{@link UniversityOrganization.Remuneration#getTravelRefund <em>Travel Refund</em>}' attribute.
@@ -46,19 +46,19 @@ public interface Remuneration extends EObject {
 	 * @see #getTravelRefund()
 	 * @generated
 	 */
-	void setTravelRefund(String value);
+	void setTravelRefund(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Per Diems</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Per Diems</em>' attribute.
-	 * @see #setPerDiems(String)
+	 * @see #setPerDiems(int)
 	 * @see UniversityOrganization.UniversityOrganizationPackage#getRemuneration_PerDiems()
 	 * @model
 	 * @generated
 	 */
-	String getPerDiems();
+	int getPerDiems();
 
 	/**
 	 * Sets the value of the '{@link UniversityOrganization.Remuneration#getPerDiems <em>Per Diems</em>}' attribute.
@@ -68,7 +68,7 @@ public interface Remuneration extends EObject {
 	 * @see #getPerDiems()
 	 * @generated
 	 */
-	void setPerDiems(String value);
+	void setPerDiems(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Hotel Prepaid</b></em>' attribute.
@@ -119,12 +119,12 @@ public interface Remuneration extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Remuneration Total</em>' attribute.
-	 * @see #setRemunerationTotal(String)
+	 * @see #setRemunerationTotal(int)
 	 * @see UniversityOrganization.UniversityOrganizationPackage#getRemuneration_RemunerationTotal()
 	 * @model
 	 * @generated
 	 */
-	String getRemunerationTotal();
+	int getRemunerationTotal();
 
 	/**
 	 * Sets the value of the '{@link UniversityOrganization.Remuneration#getRemunerationTotal <em>Remuneration Total</em>}' attribute.
@@ -134,7 +134,7 @@ public interface Remuneration extends EObject {
 	 * @see #getRemunerationTotal()
 	 * @generated
 	 */
-	void setRemunerationTotal(String value);
+	void setRemunerationTotal(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
