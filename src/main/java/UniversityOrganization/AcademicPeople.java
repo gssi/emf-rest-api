@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UniversityOrganization.AcademicPeople#getEmail <em>Email</em>}</li>
  *   <li>{@link UniversityOrganization.AcademicPeople#getGrade <em>Grade</em>}</li>
  *   <li>{@link UniversityOrganization.AcademicPeople#getShortBio <em>Short Bio</em>}</li>
+ *   <li>{@link UniversityOrganization.AcademicPeople#getTitlePrefix <em>Title Prefix</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getAcademicPeople()
@@ -137,5 +138,30 @@ public interface AcademicPeople extends EObject {
 	 * @generated
 	 */
 	void setShortBio(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Title Prefix</b></em>' attribute.
+	 * The literals are from the enumeration {@link UniversityOrganization.TitlePrefix}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Title Prefix</em>' attribute.
+	 * @see UniversityOrganization.TitlePrefix
+	 * @see #setTitlePrefix(TitlePrefix)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getAcademicPeople_TitlePrefix()
+	 * @model
+	 * @generated
+	 */
+	TitlePrefix getTitlePrefix();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.AcademicPeople#getTitlePrefix <em>Title Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Title Prefix</em>' attribute.
+	 * @see UniversityOrganization.TitlePrefix
+	 * @see #getTitlePrefix()
+	 * @generated
+	 */
+	void setTitlePrefix(TitlePrefix value);
 
 } // AcademicPeople

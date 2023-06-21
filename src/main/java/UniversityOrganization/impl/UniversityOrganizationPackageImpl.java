@@ -10,11 +10,13 @@ import UniversityOrganization.FacultyMember;
 import UniversityOrganization.Guest;
 import UniversityOrganization.Lecture;
 import UniversityOrganization.NamedElement;
+import UniversityOrganization.PaymentStatus;
 import UniversityOrganization.Position;
 import UniversityOrganization.Remuneration;
 import UniversityOrganization.ResearchCollaboration;
 import UniversityOrganization.ResearchGroup;
 import UniversityOrganization.Seminar;
+import UniversityOrganization.TitlePrefix;
 import UniversityOrganization.UniversityOrganizationFactory;
 import UniversityOrganization.UniversityOrganizationModel;
 import UniversityOrganization.UniversityOrganizationPackage;
@@ -133,6 +135,20 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	private EEnum academicGradeEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum paymentStatusEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum titlePrefixEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -235,6 +251,15 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 */
 	public EReference getDepartment_ResearchGroups() {
 		return (EReference)departmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDepartment_Director() {
+		return (EReference)departmentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -386,6 +411,24 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGuest_InvitingPerson() {
+		return (EReference)guestEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGuest_DepartmentDirector() {
+		return (EReference)guestEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAcademicPeople() {
 		return academicPeopleEClass;
 	}
@@ -433,6 +476,15 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 */
 	public EAttribute getAcademicPeople_ShortBio() {
 		return (EAttribute)academicPeopleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAcademicPeople_TitlePrefix() {
+		return (EAttribute)academicPeopleEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -503,7 +555,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSeminar_Agenda() {
+	public EAttribute getSeminar_Time() {
 		return (EAttribute)seminarEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -620,8 +672,35 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRemuneration_Status() {
+		return (EAttribute)remunerationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getAcademicGrade() {
 		return academicGradeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getPaymentStatus() {
+		return paymentStatusEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTitlePrefix() {
+		return titlePrefixEEnum;
 	}
 
 	/**
@@ -658,6 +737,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 
 		departmentEClass = createEClass(DEPARTMENT);
 		createEReference(departmentEClass, DEPARTMENT__RESEARCH_GROUPS);
+		createEReference(departmentEClass, DEPARTMENT__DIRECTOR);
 
 		researchGroupEClass = createEClass(RESEARCH_GROUP);
 		createEReference(researchGroupEClass, RESEARCH_GROUP__OPEN_POSITION);
@@ -678,6 +758,8 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		createEAttribute(guestEClass, GUEST__IN_DATE);
 		createEAttribute(guestEClass, GUEST__OUT_DATE);
 		createEReference(guestEClass, GUEST__REMUNERATION);
+		createEReference(guestEClass, GUEST__INVITING_PERSON);
+		createEReference(guestEClass, GUEST__DEPARTMENT_DIRECTOR);
 
 		academicPeopleEClass = createEClass(ACADEMIC_PEOPLE);
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__FIRST_NAME);
@@ -685,6 +767,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__EMAIL);
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__GRADE);
 		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__SHORT_BIO);
+		createEAttribute(academicPeopleEClass, ACADEMIC_PEOPLE__TITLE_PREFIX);
 
 		activityEClass = createEClass(ACTIVITY);
 		createEAttribute(activityEClass, ACTIVITY__EVENT_DATE);
@@ -695,7 +778,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		seminarEClass = createEClass(SEMINAR);
 		createEAttribute(seminarEClass, SEMINAR__TOPIC);
 		createEAttribute(seminarEClass, SEMINAR__VENUE);
-		createEAttribute(seminarEClass, SEMINAR__AGENDA);
+		createEAttribute(seminarEClass, SEMINAR__TIME);
 		createEAttribute(seminarEClass, SEMINAR__REMOTE_LINK);
 		createEAttribute(seminarEClass, SEMINAR__ABSTRACT);
 
@@ -711,9 +794,12 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		createEAttribute(remunerationEClass, REMUNERATION__HOTEL_PREPAID);
 		createEAttribute(remunerationEClass, REMUNERATION__NOTES);
 		createEAttribute(remunerationEClass, REMUNERATION__REMUNERATION_TOTAL);
+		createEAttribute(remunerationEClass, REMUNERATION__STATUS);
 
 		// Create enums
 		academicGradeEEnum = createEEnum(ACADEMIC_GRADE);
+		paymentStatusEEnum = createEEnum(PAYMENT_STATUS);
+		titlePrefixEEnum = createEEnum(TITLE_PREFIX);
 	}
 
 	/**
@@ -760,6 +846,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 
 		initEClass(departmentEClass, Department.class, "Department", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDepartment_ResearchGroups(), this.getResearchGroup(), null, "researchGroups", null, 0, -1, Department.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDepartment_Director(), this.getFacultyMember(), null, "director", null, 1, 1, Department.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(researchGroupEClass, ResearchGroup.class, "ResearchGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResearchGroup_OpenPosition(), this.getPosition(), this.getPosition_ResearchGroup(), "openPosition", null, 0, -1, ResearchGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -780,6 +867,8 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEAttribute(getGuest_InDate(), ecorePackage.getEString(), "inDate", null, 0, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGuest_OutDate(), ecorePackage.getEString(), "outDate", null, 0, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGuest_Remuneration(), this.getRemuneration(), null, "remuneration", null, 1, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGuest_InvitingPerson(), this.getFacultyMember(), null, "invitingPerson", null, 0, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGuest_DepartmentDirector(), this.getFacultyMember(), null, "departmentDirector", null, 0, 1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(academicPeopleEClass, AcademicPeople.class, "AcademicPeople", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAcademicPeople_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -787,6 +876,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEAttribute(getAcademicPeople_Email(), ecorePackage.getEString(), "email", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAcademicPeople_Grade(), this.getAcademicGrade(), "grade", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAcademicPeople_ShortBio(), ecorePackage.getEString(), "shortBio", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAcademicPeople_TitlePrefix(), this.getTitlePrefix(), "titlePrefix", null, 0, 1, AcademicPeople.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityEClass, Activity.class, "Activity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActivity_EventDate(), ecorePackage.getEString(), "eventDate", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -797,7 +887,7 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEClass(seminarEClass, Seminar.class, "Seminar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSeminar_Topic(), ecorePackage.getEString(), "topic", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeminar_Venue(), ecorePackage.getEString(), "venue", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSeminar_Agenda(), ecorePackage.getEString(), "agenda", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSeminar_Time(), ecorePackage.getEString(), "time", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeminar_RemoteLink(), ecorePackage.getEString(), "remoteLink", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSeminar_Abstract(), ecorePackage.getEString(), "abstract", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -813,12 +903,24 @@ public class UniversityOrganizationPackageImpl extends EPackageImpl implements U
 		initEAttribute(getRemuneration_HotelPrepaid(), ecorePackage.getEBoolean(), "hotelPrepaid", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRemuneration_Notes(), ecorePackage.getEString(), "notes", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRemuneration_RemunerationTotal(), ecorePackage.getEString(), "remunerationTotal", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRemuneration_Status(), this.getPaymentStatus(), "status", null, 0, 1, Remuneration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(academicGradeEEnum, AcademicGrade.class, "AcademicGrade");
 		addEEnumLiteral(academicGradeEEnum, AcademicGrade.FULL_PROFESSOR);
 		addEEnumLiteral(academicGradeEEnum, AcademicGrade.ASSOCIATE_PROFESSOR);
 		addEEnumLiteral(academicGradeEEnum, AcademicGrade.RESEARCHER);
+
+		initEEnum(paymentStatusEEnum, PaymentStatus.class, "PaymentStatus");
+		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.TODO);
+		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.IN_PROGRESS);
+		addEEnumLiteral(paymentStatusEEnum, PaymentStatus.DONE);
+
+		initEEnum(titlePrefixEEnum, TitlePrefix.class, "TitlePrefix");
+		addEEnumLiteral(titlePrefixEEnum, TitlePrefix.PROF);
+		addEEnumLiteral(titlePrefixEEnum, TitlePrefix.DR);
+		addEEnumLiteral(titlePrefixEEnum, TitlePrefix.MR);
+		addEEnumLiteral(titlePrefixEEnum, TitlePrefix.MRS);
 
 		// Create resource
 		createResource(eNS_URI);

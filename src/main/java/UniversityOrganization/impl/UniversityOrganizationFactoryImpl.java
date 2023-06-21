@@ -82,6 +82,10 @@ public class UniversityOrganizationFactoryImpl extends EFactoryImpl implements U
 		switch (eDataType.getClassifierID()) {
 			case UniversityOrganizationPackage.ACADEMIC_GRADE:
 				return createAcademicGradeFromString(eDataType, initialValue);
+			case UniversityOrganizationPackage.PAYMENT_STATUS:
+				return createPaymentStatusFromString(eDataType, initialValue);
+			case UniversityOrganizationPackage.TITLE_PREFIX:
+				return createTitlePrefixFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +101,10 @@ public class UniversityOrganizationFactoryImpl extends EFactoryImpl implements U
 		switch (eDataType.getClassifierID()) {
 			case UniversityOrganizationPackage.ACADEMIC_GRADE:
 				return convertAcademicGradeToString(eDataType, instanceValue);
+			case UniversityOrganizationPackage.PAYMENT_STATUS:
+				return convertPaymentStatusToString(eDataType, instanceValue);
+			case UniversityOrganizationPackage.TITLE_PREFIX:
+				return convertTitlePrefixToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -219,6 +227,46 @@ public class UniversityOrganizationFactoryImpl extends EFactoryImpl implements U
 	 * @generated
 	 */
 	public String convertAcademicGradeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaymentStatus createPaymentStatusFromString(EDataType eDataType, String initialValue) {
+		PaymentStatus result = PaymentStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPaymentStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TitlePrefix createTitlePrefixFromString(EDataType eDataType, String initialValue) {
+		TitlePrefix result = TitlePrefix.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTitlePrefixToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -14,7 +14,7 @@ package UniversityOrganization;
  * <ul>
  *   <li>{@link UniversityOrganization.Seminar#getTopic <em>Topic</em>}</li>
  *   <li>{@link UniversityOrganization.Seminar#getVenue <em>Venue</em>}</li>
- *   <li>{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}</li>
+ *   <li>{@link UniversityOrganization.Seminar#getTime <em>Time</em>}</li>
  *   <li>{@link UniversityOrganization.Seminar#getRemoteLink <em>Remote Link</em>}</li>
  *   <li>{@link UniversityOrganization.Seminar#getAbstract <em>Abstract</em>}</li>
  * </ul>
@@ -69,26 +69,26 @@ public interface Seminar extends Activity {
 	void setVenue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Agenda</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Agenda</em>' attribute.
-	 * @see #setAgenda(String)
-	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_Agenda()
+	 * @return the value of the '<em>Time</em>' attribute.
+	 * @see #setTime(String)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getSeminar_Time()
 	 * @model
 	 * @generated
 	 */
-	String getAgenda();
+	String getTime();
 
 	/**
-	 * Sets the value of the '{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}' attribute.
+	 * Sets the value of the '{@link UniversityOrganization.Seminar#getTime <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Agenda</em>' attribute.
-	 * @see #getAgenda()
+	 * @param value the new value of the '<em>Time</em>' attribute.
+	 * @see #getTime()
 	 * @generated
 	 */
-	void setAgenda(String value);
+	void setTime(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Remote Link</b></em>' attribute.

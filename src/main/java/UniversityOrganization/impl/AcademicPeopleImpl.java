@@ -4,6 +4,7 @@ package UniversityOrganization.impl;
 
 import UniversityOrganization.AcademicGrade;
 import UniversityOrganization.AcademicPeople;
+import UniversityOrganization.TitlePrefix;
 import UniversityOrganization.UniversityOrganizationPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getGrade <em>Grade</em>}</li>
  *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getShortBio <em>Short Bio</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.AcademicPeopleImpl#getTitlePrefix <em>Title Prefix</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,6 +132,26 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected String shortBio = SHORT_BIO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTitlePrefix() <em>Title Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitlePrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TitlePrefix TITLE_PREFIX_EDEFAULT = TitlePrefix.PROF;
+
+	/**
+	 * The cached value of the '{@link #getTitlePrefix() <em>Title Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitlePrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected TitlePrefix titlePrefix = TITLE_PREFIX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,6 +282,27 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TitlePrefix getTitlePrefix() {
+		return titlePrefix;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTitlePrefix(TitlePrefix newTitlePrefix) {
+		TitlePrefix oldTitlePrefix = titlePrefix;
+		titlePrefix = newTitlePrefix == null ? TITLE_PREFIX_EDEFAULT : newTitlePrefix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.ACADEMIC_PEOPLE__TITLE_PREFIX, oldTitlePrefix, titlePrefix));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -273,6 +316,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return getGrade();
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
 				return getShortBio();
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__TITLE_PREFIX:
+				return getTitlePrefix();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,6 +344,9 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return;
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
 				setShortBio((String)newValue);
+				return;
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__TITLE_PREFIX:
+				setTitlePrefix((TitlePrefix)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -327,6 +375,9 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
 				setShortBio(SHORT_BIO_EDEFAULT);
 				return;
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__TITLE_PREFIX:
+				setTitlePrefix(TITLE_PREFIX_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -349,6 +400,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 				return grade != GRADE_EDEFAULT;
 			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__SHORT_BIO:
 				return SHORT_BIO_EDEFAULT == null ? shortBio != null : !SHORT_BIO_EDEFAULT.equals(shortBio);
+			case UniversityOrganizationPackage.ACADEMIC_PEOPLE__TITLE_PREFIX:
+				return titlePrefix != TITLE_PREFIX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -373,6 +426,8 @@ public abstract class AcademicPeopleImpl extends MinimalEObjectImpl.Container im
 		result.append(grade);
 		result.append(", shortBio: ");
 		result.append(shortBio);
+		result.append(", titlePrefix: ");
+		result.append(titlePrefix);
 		result.append(')');
 		return result.toString();
 	}

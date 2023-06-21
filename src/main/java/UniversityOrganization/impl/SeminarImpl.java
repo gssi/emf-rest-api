@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link UniversityOrganization.impl.SeminarImpl#getTopic <em>Topic</em>}</li>
  *   <li>{@link UniversityOrganization.impl.SeminarImpl#getVenue <em>Venue</em>}</li>
- *   <li>{@link UniversityOrganization.impl.SeminarImpl#getAgenda <em>Agenda</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.SeminarImpl#getTime <em>Time</em>}</li>
  *   <li>{@link UniversityOrganization.impl.SeminarImpl#getRemoteLink <em>Remote Link</em>}</li>
  *   <li>{@link UniversityOrganization.impl.SeminarImpl#getAbstract <em>Abstract</em>}</li>
  * </ul>
@@ -70,24 +70,24 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 	protected String venue = VENUE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAgenda() <em>Agenda</em>}' attribute.
+	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAgenda()
+	 * @see #getTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String AGENDA_EDEFAULT = null;
+	protected static final String TIME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAgenda() <em>Agenda</em>}' attribute.
+	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAgenda()
+	 * @see #getTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected String agenda = AGENDA_EDEFAULT;
+	protected String time = TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRemoteLink() <em>Remote Link</em>}' attribute.
@@ -195,8 +195,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAgenda() {
-		return agenda;
+	public String getTime() {
+		return time;
 	}
 
 	/**
@@ -204,11 +204,11 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAgenda(String newAgenda) {
-		String oldAgenda = agenda;
-		agenda = newAgenda;
+	public void setTime(String newTime) {
+		String oldTime = time;
+		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.SEMINAR__AGENDA, oldAgenda, agenda));
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.SEMINAR__TIME, oldTime, time));
 	}
 
 	/**
@@ -265,8 +265,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 				return getTopic();
 			case UniversityOrganizationPackage.SEMINAR__VENUE:
 				return getVenue();
-			case UniversityOrganizationPackage.SEMINAR__AGENDA:
-				return getAgenda();
+			case UniversityOrganizationPackage.SEMINAR__TIME:
+				return getTime();
 			case UniversityOrganizationPackage.SEMINAR__REMOTE_LINK:
 				return getRemoteLink();
 			case UniversityOrganizationPackage.SEMINAR__ABSTRACT:
@@ -289,8 +289,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 			case UniversityOrganizationPackage.SEMINAR__VENUE:
 				setVenue((String)newValue);
 				return;
-			case UniversityOrganizationPackage.SEMINAR__AGENDA:
-				setAgenda((String)newValue);
+			case UniversityOrganizationPackage.SEMINAR__TIME:
+				setTime((String)newValue);
 				return;
 			case UniversityOrganizationPackage.SEMINAR__REMOTE_LINK:
 				setRemoteLink((String)newValue);
@@ -316,8 +316,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 			case UniversityOrganizationPackage.SEMINAR__VENUE:
 				setVenue(VENUE_EDEFAULT);
 				return;
-			case UniversityOrganizationPackage.SEMINAR__AGENDA:
-				setAgenda(AGENDA_EDEFAULT);
+			case UniversityOrganizationPackage.SEMINAR__TIME:
+				setTime(TIME_EDEFAULT);
 				return;
 			case UniversityOrganizationPackage.SEMINAR__REMOTE_LINK:
 				setRemoteLink(REMOTE_LINK_EDEFAULT);
@@ -341,8 +341,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 				return TOPIC_EDEFAULT == null ? topic != null : !TOPIC_EDEFAULT.equals(topic);
 			case UniversityOrganizationPackage.SEMINAR__VENUE:
 				return VENUE_EDEFAULT == null ? venue != null : !VENUE_EDEFAULT.equals(venue);
-			case UniversityOrganizationPackage.SEMINAR__AGENDA:
-				return AGENDA_EDEFAULT == null ? agenda != null : !AGENDA_EDEFAULT.equals(agenda);
+			case UniversityOrganizationPackage.SEMINAR__TIME:
+				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
 			case UniversityOrganizationPackage.SEMINAR__REMOTE_LINK:
 				return REMOTE_LINK_EDEFAULT == null ? remoteLink != null : !REMOTE_LINK_EDEFAULT.equals(remoteLink);
 			case UniversityOrganizationPackage.SEMINAR__ABSTRACT:
@@ -365,8 +365,8 @@ public class SeminarImpl extends ActivityImpl implements Seminar {
 		result.append(topic);
 		result.append(", venue: ");
 		result.append(venue);
-		result.append(", agenda: ");
-		result.append(agenda);
+		result.append(", time: ");
+		result.append(time);
 		result.append(", remoteLink: ");
 		result.append(remoteLink);
 		result.append(", abstract: ");

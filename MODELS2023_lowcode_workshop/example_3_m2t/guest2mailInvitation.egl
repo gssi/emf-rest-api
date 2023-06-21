@@ -1,0 +1,29 @@
+![GSSI logo](https://www.gssi.it/images/logo-gssi-new.png)
+
+TO: 
+Dr. [%=guest.firstName%]
+Via email: [%=guest.email%]
+
+CC:
+Prof. Patrizio Pelliccione
+Scientific Director of the Computer Science Scientific Area
+Gran Sasso Science Institute, Italy
+
+Subject: **Lecture**
+
+Dear Dr. [%=guest.firstName%],
+following the request of Adiel Tuyishime, approved by Scientific Director of the Computer Science Scientific Area, I am very pleased to invite you to the Gran Sasso Science Institute (GSSI), L'Aquila, Italy, in data [%=guest.activity.first().agenda%] to run a scientific collaboration on the following topic:
+
+**[%=guest.activity.first().topic%]**
+[%=guest.activity.first().abstract%]
+
+
+Location: [%=guest.activity.first().venue%]
+
+Adiel Tuyishime,
+L'Aquila, [%=currentTime%]. 
+
+
+
+
+

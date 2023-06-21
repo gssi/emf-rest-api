@@ -2,6 +2,7 @@
  */
 package UniversityOrganization.impl;
 
+import UniversityOrganization.PaymentStatus;
 import UniversityOrganization.Remuneration;
 import UniversityOrganization.UniversityOrganizationPackage;
 
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link UniversityOrganization.impl.RemunerationImpl#isHotelPrepaid <em>Hotel Prepaid</em>}</li>
  *   <li>{@link UniversityOrganization.impl.RemunerationImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link UniversityOrganization.impl.RemunerationImpl#getRemunerationTotal <em>Remuneration Total</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.RemunerationImpl#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +131,26 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * @ordered
 	 */
 	protected String remunerationTotal = REMUNERATION_TOTAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final PaymentStatus STATUS_EDEFAULT = PaymentStatus.TODO;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected PaymentStatus status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +281,27 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PaymentStatus getStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatus(PaymentStatus newStatus) {
+		PaymentStatus oldStatus = status;
+		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.REMUNERATION__STATUS, oldStatus, status));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -272,6 +315,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 				return getNotes();
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
 				return getRemunerationTotal();
+			case UniversityOrganizationPackage.REMUNERATION__STATUS:
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,6 +343,9 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 				return;
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
 				setRemunerationTotal((String)newValue);
+				return;
+			case UniversityOrganizationPackage.REMUNERATION__STATUS:
+				setStatus((PaymentStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,6 +374,9 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
 				setRemunerationTotal(REMUNERATION_TOTAL_EDEFAULT);
 				return;
+			case UniversityOrganizationPackage.REMUNERATION__STATUS:
+				setStatus(STATUS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +399,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 			case UniversityOrganizationPackage.REMUNERATION__REMUNERATION_TOTAL:
 				return REMUNERATION_TOTAL_EDEFAULT == null ? remunerationTotal != null : !REMUNERATION_TOTAL_EDEFAULT.equals(remunerationTotal);
+			case UniversityOrganizationPackage.REMUNERATION__STATUS:
+				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -372,6 +425,8 @@ public class RemunerationImpl extends MinimalEObjectImpl.Container implements Re
 		result.append(notes);
 		result.append(", remunerationTotal: ");
 		result.append(remunerationTotal);
+		result.append(", status: ");
+		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

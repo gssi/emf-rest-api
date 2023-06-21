@@ -4,8 +4,6 @@ package UniversityOrganization;
 
 import org.eclipse.emf.common.util.EList;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Department</b></em>'.
@@ -16,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * </p>
  * <ul>
  *   <li>{@link UniversityOrganization.Department#getResearchGroups <em>Research Groups</em>}</li>
+ *   <li>{@link UniversityOrganization.Department#getDirector <em>Director</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getDepartment()
@@ -33,7 +32,28 @@ public interface Department extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	@JsonIgnore
 	EList<ResearchGroup> getResearchGroups();
+
+	/**
+	 * Returns the value of the '<em><b>Director</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Director</em>' reference.
+	 * @see #setDirector(FacultyMember)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getDepartment_Director()
+	 * @model required="true"
+	 * @generated
+	 */
+	FacultyMember getDirector();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Department#getDirector <em>Director</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Director</em>' reference.
+	 * @see #getDirector()
+	 * @generated
+	 */
+	void setDirector(FacultyMember value);
 
 } // Department

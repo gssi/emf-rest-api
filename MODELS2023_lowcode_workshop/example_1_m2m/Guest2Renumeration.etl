@@ -1,0 +1,22 @@
+pre{
+	"Start transformation".println();
+}
+
+rule Guest2PersonRenumeration
+	transform g : Guest!Guest
+	to p : PersonRenumeration!Person {
+	
+	p.firstName = g.firstName;
+	p.lastName = g.lastName;
+	var renumeration : new PersonRenumeration!Renumeration; 
+	renumeration.payment = g.remuneration.remunerationTotal;
+	p.renumeration = renumeration;
+}
+
+post {
+  // Put all produced Persons under a root Content element
+  var root : new PersonRenumeration!PersonRenumerationModel;
+  root.persons.addAll(PersonRenumeration!Person.all);
+  "Transformation finished".println();
+}
+

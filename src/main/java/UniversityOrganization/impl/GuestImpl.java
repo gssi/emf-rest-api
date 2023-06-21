@@ -3,6 +3,7 @@
 package UniversityOrganization.impl;
 
 import UniversityOrganization.Activity;
+import UniversityOrganization.FacultyMember;
 import UniversityOrganization.Guest;
 import UniversityOrganization.Remuneration;
 import UniversityOrganization.UniversityOrganizationPackage;
@@ -35,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link UniversityOrganization.impl.GuestImpl#getInDate <em>In Date</em>}</li>
  *   <li>{@link UniversityOrganization.impl.GuestImpl#getOutDate <em>Out Date</em>}</li>
  *   <li>{@link UniversityOrganization.impl.GuestImpl#getRemuneration <em>Remuneration</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.GuestImpl#getInvitingPerson <em>Inviting Person</em>}</li>
+ *   <li>{@link UniversityOrganization.impl.GuestImpl#getDepartmentDirector <em>Department Director</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,6 +122,26 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 	 * @ordered
 	 */
 	protected Remuneration remuneration;
+
+	/**
+	 * The cached value of the '{@link #getInvitingPerson() <em>Inviting Person</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInvitingPerson()
+	 * @generated
+	 * @ordered
+	 */
+	protected FacultyMember invitingPerson;
+
+	/**
+	 * The cached value of the '{@link #getDepartmentDirector() <em>Department Director</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDepartmentDirector()
+	 * @generated
+	 * @ordered
+	 */
+	protected FacultyMember departmentDirector;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -262,6 +285,82 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FacultyMember getInvitingPerson() {
+		if (invitingPerson != null && invitingPerson.eIsProxy()) {
+			InternalEObject oldInvitingPerson = (InternalEObject)invitingPerson;
+			invitingPerson = (FacultyMember)eResolveProxy(oldInvitingPerson);
+			if (invitingPerson != oldInvitingPerson) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UniversityOrganizationPackage.GUEST__INVITING_PERSON, oldInvitingPerson, invitingPerson));
+			}
+		}
+		return invitingPerson;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FacultyMember basicGetInvitingPerson() {
+		return invitingPerson;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInvitingPerson(FacultyMember newInvitingPerson) {
+		FacultyMember oldInvitingPerson = invitingPerson;
+		invitingPerson = newInvitingPerson;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.GUEST__INVITING_PERSON, oldInvitingPerson, invitingPerson));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FacultyMember getDepartmentDirector() {
+		if (departmentDirector != null && departmentDirector.eIsProxy()) {
+			InternalEObject oldDepartmentDirector = (InternalEObject)departmentDirector;
+			departmentDirector = (FacultyMember)eResolveProxy(oldDepartmentDirector);
+			if (departmentDirector != oldDepartmentDirector) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR, oldDepartmentDirector, departmentDirector));
+			}
+		}
+		return departmentDirector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FacultyMember basicGetDepartmentDirector() {
+		return departmentDirector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDepartmentDirector(FacultyMember newDepartmentDirector) {
+		FacultyMember oldDepartmentDirector = departmentDirector;
+		departmentDirector = newDepartmentDirector;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR, oldDepartmentDirector, departmentDirector));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -291,6 +390,12 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 				return getOutDate();
 			case UniversityOrganizationPackage.GUEST__REMUNERATION:
 				return getRemuneration();
+			case UniversityOrganizationPackage.GUEST__INVITING_PERSON:
+				if (resolve) return getInvitingPerson();
+				return basicGetInvitingPerson();
+			case UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR:
+				if (resolve) return getDepartmentDirector();
+				return basicGetDepartmentDirector();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,6 +425,12 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 			case UniversityOrganizationPackage.GUEST__REMUNERATION:
 				setRemuneration((Remuneration)newValue);
 				return;
+			case UniversityOrganizationPackage.GUEST__INVITING_PERSON:
+				setInvitingPerson((FacultyMember)newValue);
+				return;
+			case UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR:
+				setDepartmentDirector((FacultyMember)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -347,6 +458,12 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 			case UniversityOrganizationPackage.GUEST__REMUNERATION:
 				setRemuneration((Remuneration)null);
 				return;
+			case UniversityOrganizationPackage.GUEST__INVITING_PERSON:
+				setInvitingPerson((FacultyMember)null);
+				return;
+			case UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR:
+				setDepartmentDirector((FacultyMember)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -369,6 +486,10 @@ public class GuestImpl extends AcademicPeopleImpl implements Guest {
 				return OUT_DATE_EDEFAULT == null ? outDate != null : !OUT_DATE_EDEFAULT.equals(outDate);
 			case UniversityOrganizationPackage.GUEST__REMUNERATION:
 				return remuneration != null;
+			case UniversityOrganizationPackage.GUEST__INVITING_PERSON:
+				return invitingPerson != null;
+			case UniversityOrganizationPackage.GUEST__DEPARTMENT_DIRECTOR:
+				return departmentDirector != null;
 		}
 		return super.eIsSet(featureID);
 	}

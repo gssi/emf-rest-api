@@ -178,13 +178,22 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int DEPARTMENT__RESEARCH_GROUPS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Director</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPARTMENT__DIRECTOR = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Department</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPARTMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int DEPARTMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Department</em>' class.
@@ -297,13 +306,22 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int ACADEMIC_PEOPLE__SHORT_BIO = 4;
 
 	/**
+	 * The feature id for the '<em><b>Title Prefix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACADEMIC_PEOPLE__TITLE_PREFIX = 5;
+
+	/**
 	 * The number of structural features of the '<em>Academic People</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACADEMIC_PEOPLE_FEATURE_COUNT = 5;
+	int ACADEMIC_PEOPLE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Academic People</em>' class.
@@ -368,6 +386,15 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @ordered
 	 */
 	int FACULTY_MEMBER__SHORT_BIO = ACADEMIC_PEOPLE__SHORT_BIO;
+
+	/**
+	 * The feature id for the '<em><b>Title Prefix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACULTY_MEMBER__TITLE_PREFIX = ACADEMIC_PEOPLE__TITLE_PREFIX;
 
 	/**
 	 * The feature id for the '<em><b>Positions</b></em>' containment reference list.
@@ -525,6 +552,15 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int GUEST__SHORT_BIO = ACADEMIC_PEOPLE__SHORT_BIO;
 
 	/**
+	 * The feature id for the '<em><b>Title Prefix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST__TITLE_PREFIX = ACADEMIC_PEOPLE__TITLE_PREFIX;
+
+	/**
 	 * The feature id for the '<em><b>Activity</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,13 +606,31 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int GUEST__REMUNERATION = ACADEMIC_PEOPLE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Inviting Person</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST__INVITING_PERSON = ACADEMIC_PEOPLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Department Director</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST__DEPARTMENT_DIRECTOR = ACADEMIC_PEOPLE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_FEATURE_COUNT = ACADEMIC_PEOPLE_FEATURE_COUNT + 5;
+	int GUEST_FEATURE_COUNT = ACADEMIC_PEOPLE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Guest</em>' class.
@@ -708,13 +762,13 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int SEMINAR__VENUE = ACTIVITY_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Agenda</b></em>' attribute.
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMINAR__AGENDA = ACTIVITY_FEATURE_COUNT + 2;
+	int SEMINAR__TIME = ACTIVITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Remote Link</b></em>' attribute.
@@ -854,13 +908,22 @@ public interface UniversityOrganizationPackage extends EPackage {
 	int REMUNERATION__REMUNERATION_TOTAL = 4;
 
 	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMUNERATION__STATUS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Remuneration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REMUNERATION_FEATURE_COUNT = 5;
+	int REMUNERATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Remuneration</em>' class.
@@ -880,6 +943,26 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @generated
 	 */
 	int ACADEMIC_GRADE = 13;
+
+	/**
+	 * The meta object id for the '{@link UniversityOrganization.PaymentStatus <em>Payment Status</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UniversityOrganization.PaymentStatus
+	 * @see UniversityOrganization.impl.UniversityOrganizationPackageImpl#getPaymentStatus()
+	 * @generated
+	 */
+	int PAYMENT_STATUS = 14;
+
+	/**
+	 * The meta object id for the '{@link UniversityOrganization.TitlePrefix <em>Title Prefix</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see UniversityOrganization.TitlePrefix
+	 * @see UniversityOrganization.impl.UniversityOrganizationPackageImpl#getTitlePrefix()
+	 * @generated
+	 */
+	int TITLE_PREFIX = 15;
 
 
 	/**
@@ -934,6 +1017,17 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDepartment_ResearchGroups();
+
+	/**
+	 * Returns the meta object for the reference '{@link UniversityOrganization.Department#getDirector <em>Director</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Director</em>'.
+	 * @see UniversityOrganization.Department#getDirector()
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	EReference getDepartment_Director();
 
 	/**
 	 * Returns the meta object for class '{@link UniversityOrganization.ResearchGroup <em>Research Group</em>}'.
@@ -1108,6 +1202,28 @@ public interface UniversityOrganizationPackage extends EPackage {
 	EReference getGuest_Remuneration();
 
 	/**
+	 * Returns the meta object for the reference '{@link UniversityOrganization.Guest#getInvitingPerson <em>Inviting Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inviting Person</em>'.
+	 * @see UniversityOrganization.Guest#getInvitingPerson()
+	 * @see #getGuest()
+	 * @generated
+	 */
+	EReference getGuest_InvitingPerson();
+
+	/**
+	 * Returns the meta object for the reference '{@link UniversityOrganization.Guest#getDepartmentDirector <em>Department Director</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Department Director</em>'.
+	 * @see UniversityOrganization.Guest#getDepartmentDirector()
+	 * @see #getGuest()
+	 * @generated
+	 */
+	EReference getGuest_DepartmentDirector();
+
+	/**
 	 * Returns the meta object for class '{@link UniversityOrganization.AcademicPeople <em>Academic People</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1171,6 +1287,17 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAcademicPeople_ShortBio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.AcademicPeople#getTitlePrefix <em>Title Prefix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title Prefix</em>'.
+	 * @see UniversityOrganization.AcademicPeople#getTitlePrefix()
+	 * @see #getAcademicPeople()
+	 * @generated
+	 */
+	EAttribute getAcademicPeople_TitlePrefix();
 
 	/**
 	 * Returns the meta object for class '{@link UniversityOrganization.Activity <em>Activity</em>}'.
@@ -1247,15 +1374,15 @@ public interface UniversityOrganizationPackage extends EPackage {
 	EAttribute getSeminar_Venue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getAgenda <em>Agenda</em>}'.
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getTime <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Agenda</em>'.
-	 * @see UniversityOrganization.Seminar#getAgenda()
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see UniversityOrganization.Seminar#getTime()
 	 * @see #getSeminar()
 	 * @generated
 	 */
-	EAttribute getSeminar_Agenda();
+	EAttribute getSeminar_Time();
 
 	/**
 	 * Returns the meta object for the attribute '{@link UniversityOrganization.Seminar#getRemoteLink <em>Remote Link</em>}'.
@@ -1387,6 +1514,17 @@ public interface UniversityOrganizationPackage extends EPackage {
 	EAttribute getRemuneration_RemunerationTotal();
 
 	/**
+	 * Returns the meta object for the attribute '{@link UniversityOrganization.Remuneration#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Status</em>'.
+	 * @see UniversityOrganization.Remuneration#getStatus()
+	 * @see #getRemuneration()
+	 * @generated
+	 */
+	EAttribute getRemuneration_Status();
+
+	/**
 	 * Returns the meta object for enum '{@link UniversityOrganization.AcademicGrade <em>Academic Grade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1395,6 +1533,26 @@ public interface UniversityOrganizationPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getAcademicGrade();
+
+	/**
+	 * Returns the meta object for enum '{@link UniversityOrganization.PaymentStatus <em>Payment Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Payment Status</em>'.
+	 * @see UniversityOrganization.PaymentStatus
+	 * @generated
+	 */
+	EEnum getPaymentStatus();
+
+	/**
+	 * Returns the meta object for enum '{@link UniversityOrganization.TitlePrefix <em>Title Prefix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Title Prefix</em>'.
+	 * @see UniversityOrganization.TitlePrefix
+	 * @generated
+	 */
+	EEnum getTitlePrefix();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1462,6 +1620,14 @@ public interface UniversityOrganizationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DEPARTMENT__RESEARCH_GROUPS = eINSTANCE.getDepartment_ResearchGroups();
+
+		/**
+		 * The meta object literal for the '<em><b>Director</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPARTMENT__DIRECTOR = eINSTANCE.getDepartment_Director();
 
 		/**
 		 * The meta object literal for the '{@link UniversityOrganization.impl.ResearchGroupImpl <em>Research Group</em>}' class.
@@ -1600,6 +1766,22 @@ public interface UniversityOrganizationPackage extends EPackage {
 		EReference GUEST__REMUNERATION = eINSTANCE.getGuest_Remuneration();
 
 		/**
+		 * The meta object literal for the '<em><b>Inviting Person</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GUEST__INVITING_PERSON = eINSTANCE.getGuest_InvitingPerson();
+
+		/**
+		 * The meta object literal for the '<em><b>Department Director</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GUEST__DEPARTMENT_DIRECTOR = eINSTANCE.getGuest_DepartmentDirector();
+
+		/**
 		 * The meta object literal for the '{@link UniversityOrganization.impl.AcademicPeopleImpl <em>Academic People</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1648,6 +1830,14 @@ public interface UniversityOrganizationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACADEMIC_PEOPLE__SHORT_BIO = eINSTANCE.getAcademicPeople_ShortBio();
+
+		/**
+		 * The meta object literal for the '<em><b>Title Prefix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACADEMIC_PEOPLE__TITLE_PREFIX = eINSTANCE.getAcademicPeople_TitlePrefix();
 
 		/**
 		 * The meta object literal for the '{@link UniversityOrganization.impl.ActivityImpl <em>Activity</em>}' class.
@@ -1712,12 +1902,12 @@ public interface UniversityOrganizationPackage extends EPackage {
 		EAttribute SEMINAR__VENUE = eINSTANCE.getSeminar_Venue();
 
 		/**
-		 * The meta object literal for the '<em><b>Agenda</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEMINAR__AGENDA = eINSTANCE.getSeminar_Agenda();
+		EAttribute SEMINAR__TIME = eINSTANCE.getSeminar_Time();
 
 		/**
 		 * The meta object literal for the '<em><b>Remote Link</b></em>' attribute feature.
@@ -1822,6 +2012,14 @@ public interface UniversityOrganizationPackage extends EPackage {
 		EAttribute REMUNERATION__REMUNERATION_TOTAL = eINSTANCE.getRemuneration_RemunerationTotal();
 
 		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REMUNERATION__STATUS = eINSTANCE.getRemuneration_Status();
+
+		/**
 		 * The meta object literal for the '{@link UniversityOrganization.AcademicGrade <em>Academic Grade</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1830,6 +2028,26 @@ public interface UniversityOrganizationPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ACADEMIC_GRADE = eINSTANCE.getAcademicGrade();
+
+		/**
+		 * The meta object literal for the '{@link UniversityOrganization.PaymentStatus <em>Payment Status</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UniversityOrganization.PaymentStatus
+		 * @see UniversityOrganization.impl.UniversityOrganizationPackageImpl#getPaymentStatus()
+		 * @generated
+		 */
+		EEnum PAYMENT_STATUS = eINSTANCE.getPaymentStatus();
+
+		/**
+		 * The meta object literal for the '{@link UniversityOrganization.TitlePrefix <em>Title Prefix</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see UniversityOrganization.TitlePrefix
+		 * @see UniversityOrganization.impl.UniversityOrganizationPackageImpl#getTitlePrefix()
+		 * @generated
+		 */
+		EEnum TITLE_PREFIX = eINSTANCE.getTitlePrefix();
 
 	}
 

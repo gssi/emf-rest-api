@@ -18,6 +18,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link UniversityOrganization.Guest#getInDate <em>In Date</em>}</li>
  *   <li>{@link UniversityOrganization.Guest#getOutDate <em>Out Date</em>}</li>
  *   <li>{@link UniversityOrganization.Guest#getRemuneration <em>Remuneration</em>}</li>
+ *   <li>{@link UniversityOrganization.Guest#getInvitingPerson <em>Inviting Person</em>}</li>
+ *   <li>{@link UniversityOrganization.Guest#getDepartmentDirector <em>Department Director</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getGuest()
@@ -124,5 +126,49 @@ public interface Guest extends AcademicPeople {
 	 * @generated
 	 */
 	void setRemuneration(Remuneration value);
+
+	/**
+	 * Returns the value of the '<em><b>Inviting Person</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inviting Person</em>' reference.
+	 * @see #setInvitingPerson(FacultyMember)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getGuest_InvitingPerson()
+	 * @model
+	 * @generated
+	 */
+	FacultyMember getInvitingPerson();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Guest#getInvitingPerson <em>Inviting Person</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inviting Person</em>' reference.
+	 * @see #getInvitingPerson()
+	 * @generated
+	 */
+	void setInvitingPerson(FacultyMember value);
+
+	/**
+	 * Returns the value of the '<em><b>Department Director</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Department Director</em>' reference.
+	 * @see #setDepartmentDirector(FacultyMember)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getGuest_DepartmentDirector()
+	 * @model
+	 * @generated
+	 */
+	FacultyMember getDepartmentDirector();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Guest#getDepartmentDirector <em>Department Director</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Department Director</em>' reference.
+	 * @see #getDepartmentDirector()
+	 * @generated
+	 */
+	void setDepartmentDirector(FacultyMember value);
 
 } // Guest

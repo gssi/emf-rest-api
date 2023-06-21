@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PersonRenumeration:PersonRenumerationModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:PersonRenumeration="http://it.gssi/person_renumeration/v1"
+    xsi:schemaLocation="http://it.gssi/person_renumeration/v1 PersonRenumeration.ecore">
+  <persons firstName="Ludovico"
+      lastName="Iovino">
+    <renumeration
+        payment="300.00"/>
+  </persons>
+</PersonRenumeration:PersonRenumerationModel>

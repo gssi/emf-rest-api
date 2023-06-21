@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link UniversityOrganization.Remuneration#isHotelPrepaid <em>Hotel Prepaid</em>}</li>
  *   <li>{@link UniversityOrganization.Remuneration#getNotes <em>Notes</em>}</li>
  *   <li>{@link UniversityOrganization.Remuneration#getRemunerationTotal <em>Remuneration Total</em>}</li>
+ *   <li>{@link UniversityOrganization.Remuneration#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @see UniversityOrganization.UniversityOrganizationPackage#getRemuneration()
@@ -134,5 +135,30 @@ public interface Remuneration extends EObject {
 	 * @generated
 	 */
 	void setRemunerationTotal(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' attribute.
+	 * The literals are from the enumeration {@link UniversityOrganization.PaymentStatus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Status</em>' attribute.
+	 * @see UniversityOrganization.PaymentStatus
+	 * @see #setStatus(PaymentStatus)
+	 * @see UniversityOrganization.UniversityOrganizationPackage#getRemuneration_Status()
+	 * @model
+	 * @generated
+	 */
+	PaymentStatus getStatus();
+
+	/**
+	 * Sets the value of the '{@link UniversityOrganization.Remuneration#getStatus <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @see UniversityOrganization.PaymentStatus
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(PaymentStatus value);
 
 } // Remuneration

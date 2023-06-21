@@ -4,8 +4,6 @@ package UniversityOrganization;
 
 import org.eclipse.emf.ecore.EObject;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Position</b></em>'.
@@ -81,7 +79,6 @@ public interface Position extends EObject {
 	 * @model opposite="openPosition" required="true"
 	 * @generated
 	 */
-	@JsonIgnore
 	ResearchGroup getResearchGroup();
 
 	/**

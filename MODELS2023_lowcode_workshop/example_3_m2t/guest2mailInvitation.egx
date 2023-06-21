@@ -1,0 +1,16 @@
+operation getCurrentTime() {
+	var javaDate = new Native("java.util.Date");
+	return javaDate;
+}
+
+rule Guest2MailInvitation
+	transform guest : Guest { 
+	
+	parameters : Map{
+		"currentTime" = getCurrentTime()
+	}
+       // For every Guest in the model ...
+	template : "guest2mailInvitation.egl"
+	target : "gen/" + guest.lastName + "_mail_invitation.md" 
+}
+
